@@ -15,11 +15,8 @@ function XDictionary() {
         meaning: "An object that stores data for a component." 
     }
   ]);
-
   let [search, setSearch] = useState("");
   let [searchReturn, setSearchReturn] = useState("");
-
-  // Function to handle word search
   let handleSearch = () => {
     let foundWord = dictionary.find(
       (entry) => entry.word.toLowerCase() === search.toLowerCase()
@@ -30,7 +27,6 @@ function XDictionary() {
       setSearchReturn("Word not found in the dictionary.");
     }
   };
-
   return (
     <div>
       <h1>Dictionary App</h1>
